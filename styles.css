@@ -1,0 +1,305 @@
+/* StatusCycler Plugin Styles */
+
+/* Modal sections */
+.vc-statuscycler-modal-section {
+    margin-bottom: 16px;
+}
+
+.vc-statuscycler-modal-section > h5 {
+    margin-bottom: 8px;
+}
+
+/* Status list */
+.vc-statuscycler-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.vc-statuscycler-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.vc-statuscycler-list-empty {
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--text-muted);
+}
+
+/* Single status item */
+.vc-statuscycler-list-item {
+    border: 1px solid var(--background-modifier-accent);
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: var(--background-secondary);
+}
+
+.vc-statuscycler-list-item.disabled {
+    opacity: 0.5;
+}
+
+.vc-statuscycler-list-item.current {
+    border-color: var(--green-360);
+    box-shadow: 0 0 0 1px var(--green-360);
+}
+
+.vc-statuscycler-list-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.vc-statuscycler-item-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-normal);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.vc-statuscycler-item-emoji {
+    font-size: 16px;
+}
+
+.vc-statuscycler-list-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+/* Buttons */
+.vc-statuscycler-toggle-btn,
+.vc-statuscycler-edit-btn,
+.vc-statuscycler-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--interactive-normal);
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.vc-statuscycler-toggle-btn:hover,
+.vc-statuscycler-edit-btn:hover,
+.vc-statuscycler-delete-btn:hover {
+    background: var(--background-modifier-hover);
+    color: var(--interactive-hover);
+}
+
+.vc-statuscycler-toggle-btn.enabled {
+    color: var(--green-360);
+    font-weight: 700;
+}
+
+.vc-statuscycler-delete-btn:hover {
+    color: var(--red-345);
+}
+
+.vc-statuscycler-edit-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.vc-statuscycler-delay-input {
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-accent);
+    border-radius: 4px;
+    color: var(--text-normal);
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 120px;
+    outline: none;
+}
+
+.vc-statuscycler-delay-input:focus {
+    border-color: var(--interactive-active);
+}
+
+.vc-statuscycler-profile-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.vc-statuscycler-profile-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-accent);
+    border-radius: 16px;
+    color: var(--text-muted);
+    padding: 4px 12px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.vc-statuscycler-profile-chip:hover {
+    color: var(--text-normal);
+    border-color: var(--interactive-hover);
+}
+
+.vc-statuscycler-profile-chip.active {
+    background: var(--brand-500);
+    border-color: var(--brand-500);
+    color: #fff;
+    font-weight: 600;
+}
+
+.vc-statuscycler-profile-count {
+    font-size: 11px;
+    opacity: 0.75;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 0 5px;
+}
+
+.vc-statuscycler-profile-add {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px dashed var(--background-modifier-accent);
+    background: none;
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-statuscycler-profile-add:hover {
+    color: var(--text-normal);
+    border-color: var(--interactive-hover);
+}
+
+.vc-statuscycler-profile-actions {
+    margin-bottom: 4px;
+}
+
+.vc-statuscycler-bulk-textarea {
+    width: 100%;
+    min-height: 160px;
+    resize: vertical;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-accent);
+    border-radius: 4px;
+    color: var(--text-normal);
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.vc-statuscycler-bulk-textarea:focus {
+    border-color: var(--interactive-active);
+}
+
+.vc-statuscycler-bulk-preview {
+    margin-top: 10px;
+    border-top: 1px solid var(--background-modifier-accent);
+    padding-top: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.vc-statuscycler-bulk-preview-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--text-normal);
+    padding: 3px 0;
+}
+
+.vc-statuscycler-bulk-preview-delay {
+    color: var(--interactive-muted);
+    font-size: 12px;
+}
+
+/* Item meta row */
+.vc-statuscycler-list-item-meta {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--interactive-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vc-statuscycler-current-badge {
+    background: var(--green-360);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+/* Loop controls */
+.vc-statuscycler-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    background: var(--background-secondary);
+    border: 1px solid var(--background-modifier-accent);
+}
+
+.vc-statuscycler-controls-state {
+    flex: 1;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.vc-statuscycler-controls-state.running {
+    color: var(--green-360);
+    font-weight: 600;
+}
+
+/* Checkbox row */
+.vc-statuscycler-checkbox-row {
+    margin-top: 8px;
+}
+
+.vc-statuscycler-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-normal);
+}
+
+.vc-statuscycler-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Hint text */
+.vc-statuscycler-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--interactive-muted);
+    font-style: italic;
+}
